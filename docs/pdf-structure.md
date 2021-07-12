@@ -29,7 +29,7 @@ Here is an example of a page object, with some explanation:
     /Contents [4 0 R] % Defining the contents of the page(text, art, ...)
 >>
 ```
-Many of the things in this example will get clearer as you continue reading this blog. After finishing reading this article you might be interested in reading about [data types in PDFs](datatypes).
+Many of the things in this example will get clearer as you continue reading this blog. After finishing reading this article you might be interested in reading about [data types](data-types) and [object types](object-types) in PDFs.
 
 Ultimately the body of a pdf is composed of a tree of objects linked together. At the base of everything there is a **Root Object**, referenced by the trailer in footer (read more about this below) which then references all the other objects of the document.
 
@@ -75,7 +75,7 @@ startxref
 ```
 
 ## But why go trough all this trouble to display a document?
-You might be kind of confused on why there is a need for all this object tree and byte offset mess, and tbh it's fair, so why are we doing this? Welp, PDFs are made for speed and memory efficiency, a PDF viewer want to avaoid loading the full document in memory because of limited resources (especially in older machines this can't be taken for grnated), so by having a Cross-reference table and all this separate objects a PDF viewer can start reading the document from the bottom, see what it needs to load from the drive and load only that to display on the screen. I hope that explains it!
+You might be kind of confused on why there is a need for all this object tree and byte offset mess, and tbh it's a fair question, so why are we doing this? Welp, PDFs are made for speed and memory efficiency, a PDF viewer want to avaoid loading the full document in memory because of limited resources (especially in older machines this can't be taken for granted), so by having a Cross-reference table and all this separate objects a PDF viewer can start reading the document from the bottom, see what it needs to load from the drive and load only that to display it on the screen. I hope that explains it!
 
 
 
