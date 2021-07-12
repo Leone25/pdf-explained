@@ -74,7 +74,7 @@ startxref
 %%EOF
 ```
 
-##But why go trough all this trouble to display a document?
+## But why go trough all this trouble to display a document?
 You might be kind of confused on why there is a need for all this object tree and byte offset mess, and tbh it's fair, so why are we doing this? Welp, PDFs are made for speed and memory efficiency, a PDF viewer want to avaoid loading the full document in memory because of limited resources (especially in older machines this can't be taken for grnated), so by having a Cross-reference table and all this separate objects a PDF viewer can start reading the document from the bottom, see what it needs to load from the drive and load only that to display on the screen. I hope that explains it!
 
 
