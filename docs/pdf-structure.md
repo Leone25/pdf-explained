@@ -1,9 +1,9 @@
 # The PDF structure
 
 At a very simplified level PDFs are composed of 3 parts:
-1. The header
-2. The body
-3. The footer
+[1. The header](#the-header)
+[2. The body](#the-body)
+[3. The footer](#the-footer)
 
 ## The header
 
