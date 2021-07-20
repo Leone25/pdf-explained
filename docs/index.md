@@ -7,3 +7,8 @@ Check out this [first article](pdf-structure) to get you started on the basic st
 
 ## Other readings:
  - [PDF Explained by John Whitington](https://www.oreilly.com/library/view/pdf-explained/9781449321581/)
+
+
+## Useful tools:
+ - [PDF inspect by PDFux](https://pdfux.com/inspect-pdf/)
+ - [PDF toolkit by PDF Labs](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/)
