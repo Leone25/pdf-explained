@@ -36,6 +36,22 @@ Strings can be also encoded as a sequence of hexadecimal digits between two `<` 
 <5044462061726520636f6f6c21> % Converts to 'PDFs are cool!'
 ```
 
+## Dates
+Dates are actually strings with a particular format shown below.
+```pdf
+(D: YYYYMMDDHHmmSSOHH'mm)
+```
+Key | Value
+------------ | -------------
+`YYYY` | The year
+`MM` | The month
+`DD` | The day
+`HH` | The hour
+`mm` | The minute
+`O` | Timezone + or - or `Z` if UTC
+`HH` | The hours offset of the timezone, if present must be followed by an apostrophe `'`
+`mm` | The the minutes offset of the timezone
+
 ## Names
 Names are words preceded by a forward slash `/` and find many uses all troughout a document, but their most common use is as keys for Dictionaries (see below). They can contain `#xx` hexadecimal ASCII (like URLs) which will be converted by the reader on need.
 ```pdf
