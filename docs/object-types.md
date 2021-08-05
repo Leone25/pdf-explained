@@ -12,7 +12,7 @@ At a minimum an object starts with a `obj` keyword, preceeded by its object numb
     /Contents [4 0 R] % Defining the contents of the page(text, art, ...)
 >>
 ```
-This is a page object as it's defined by the key `/Type`. There are many of this and that's what we are going to focus on in this article, we are going to learn which types exist, what they do and what other keys they accept because of this.
+This is a page object as it's defined by the key `/Type`. There are many functions an object could perform, we are going to learn which types exist, what they do and what data they contain.
 
 ### Index
  - [Trailer](#trailer)
@@ -37,6 +37,31 @@ Key | Value type | Value
   /ID [(Hello) (World)]
 >>
 ```
+
+## Info
+One of the object referenced in the trailer is the info object, which basically contains metadata about the PDF, who made it, when, ecc. This data is to be used for cataloging by external programs and it's generally not displayed to the user. The content of this object can be summarized in the following table.
+Key | Value type | Value
+------------ | ------------- | -------------
+`/Title` | String | This is the title of the document
+`/Subject` | String | This is a small summary of the PDF
+`/Keywords` | String | Keywords for this document, no specific data structure is provided
+`/Author` | String | The name of the author of the document
+`/CreationDate` | Date | The date when the document was first created
+`/ModDate` | Date | The date when the document has been last modified
+`/Creator` | String | The name of the program that has generated this document
+`/Producer` | String | The name of the program that converted the document to PDF
+```pdf
+420 0 obj
+<<
+  /Title (Pdf explained)
+  /Author (Enrico)
+  /CreatingDate (D:20210805104817+02'00)
+>>
+endobj
+```
+
+
+
 
 
 
