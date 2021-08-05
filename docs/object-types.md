@@ -38,7 +38,7 @@ Key | Value type | Value
 >>
 ```
 
-## Info
+## Metadata Object
 One of the object referenced in the trailer is the info object, which basically contains metadata about the PDF, who made it, when, ecc. This data is to be used for cataloging by external programs and it's generally not displayed to the user. The content of this object can be summarized in the following table.
 Key | Value type | Value
 ------------ | ------------- | -------------
@@ -59,6 +59,24 @@ Key | Value type | Value
 >>
 endobj
 ```
+
+## Document Object
+The document object is one of the fondamental objects referenced in the trailer. It's the root of the page tree. It's content can be summarized in the following table.
+
+Key | Value type | Value
+------------ | ------------- | -------------
+`/Type` | Name | (Required) `/Catalog`
+`/Pages` | Indirect reference | (Required) This an indirect reference to the first pages node (more about this later)
+`/PageLables` | Number tree | A number tree giving the page lables for the document
+`/Names` | Dictionary | This maps objects to names, which can be useful to avoid to having to reference by object number every time
+`/Dest` | Array | This maps locations of hyperlinks within a document
+`/ViewerPreferences` | Dictionary | This contains a series of flags that the PDF viewer will use as default settings to display the file
+`/PageLayout` | Name | Either `/SinglePage`, `/OneColumn`, `TwoColumnLeft`, `TwoColumnRight`, `/TwoPageLeft` or `/TwoPageRight`. If missing will be `/SinglePage`
+`/Outline` | Dictionary | The outline dictionary
+`/Metadata` | Indirect reference to stream | Stream will contain the XMP metadata
+
+Remember that what I'm showing here is just a couple of the available keys. If you want to learn more look into table 28 of the PDF spec.
+
 
 
 
